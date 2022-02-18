@@ -1,9 +1,12 @@
-import Statistics from "./Statistics";
+import Statistics from "./Statistics";     
+import Container from './Container/Container' 
+ 
+
 
 export const App = () => {
   return (
-    <div>
-      <Statistics/>
-    </div>
+    <Container>
+      <Statistics />
+    </Container>
   );
 };

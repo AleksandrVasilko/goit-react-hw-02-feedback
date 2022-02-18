@@ -1,6 +1,7 @@
 import React from "react";
 import Controls from './Controls';
 import StaticRes from './StaticRes'
+import s from './Controls.module.css'
 
 
 
@@ -50,13 +51,13 @@ class Statistics extends React.Component {
         
         return (
             <div className="Statistics">
-                <p>Please leave feetback</p>
+                <p className={s.title}>Please leave feetback</p>
                 <Controls
                     onIncrementGood={this.handleIncrementGood}
                     onIncrementNeutral={this.handleIncrementNeutral}
                     onIncrementBad={this.handleIncrementBad}
                 />
-                <p>Statistics</p>
+                <p className={s.title}>Statistics</p>
                 <StaticRes
                     good={good}
                     bad={bad}

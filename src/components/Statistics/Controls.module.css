@@ -1,0 +1,24 @@
+.feedButton {
+  padding: 10px 25px;
+  margin: 15px;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+.title {
+  font-size: 75px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.notifMess {
+  font-size: 30px;
+  font-weight: 600;
+  color: red;
+}
+
+.statistics__value {
+  font-size: 30px;
+  margin: 10px 0;
+  font-weight: 600;
+}
