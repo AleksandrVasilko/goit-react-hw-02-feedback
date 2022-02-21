@@ -13,24 +13,10 @@ class Statistics extends React.Component {
         bad: 0
     }
 
-    handleIncrementGood = () => {
-        this.setState(prevState => ({
-            good: prevState.good + 1,
-        }));
-    };
-
-    handleIncrementNeutral = () => {
-        this.setState(prevState => ({
-            neutral: prevState.neutral + 1,
-        }));
-    };
-
-     handleIncrementBad = () => {
-        this.setState(prevState => ({
-            bad: prevState.bad + 1,
-        }));
-    };
-
+    handleClick = control => {
+		this.setState({ [control]: this.state[control] + 1 });
+	};
+    
     
     countTotalFeedback = () => {
         const { good, bad, neutral } = this.state;
@@ -53,9 +39,8 @@ class Statistics extends React.Component {
             <div className="Statistics">
                 <p className={s.title}>Please leave feetback</p>
                 <Controls
-                    onIncrementGood={this.handleIncrementGood}
-                    onIncrementNeutral={this.handleIncrementNeutral}
-                    onIncrementBad={this.handleIncrementBad}
+                    options={['good', 'neutral', 'bad']}
+                    onHandleClick={this.handleClick}
                 />
                 <p className={s.title}>Statistics</p>
                 <StaticRes
@@ -64,9 +49,7 @@ class Statistics extends React.Component {
                     neutral={neutral}
                     totalFeedback={total}
                     goodPercent={rating}
-                />
-                
-                
+                />  
             </div>
         )
     }
